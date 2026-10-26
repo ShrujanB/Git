@@ -17,6 +17,8 @@ penguins |>
   summarize(avg_bill_length = mean(bill_length_mm, na.rm = TRUE),
             n = n())
 ```
+   Chinstrap and Gentoo penguins have noticeably longer bills than Adelie penguins.
+
 ---
 
 ## Quarto
