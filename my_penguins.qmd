@@ -1,0 +1,32 @@
+---
+title: "My Penguins"
+format: html
+---
+
+```{r}
+#| message: false
+library(tidyverse)
+library(palmerpenguins)
+```
+
+## Summary table
+
+```{r}
+penguins |>
+  group_by(species) |>
+  summarize(avg_bill_length = mean(bill_length_mm, na.rm = TRUE),
+            n = n())
+```
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+
+## Plot
+
+```{r}
+   ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) + geom_point() + labs(title = "Flipper length vs body mass", x = "Flipper length (mm)", y = "Body mass (g)")
+```
+
